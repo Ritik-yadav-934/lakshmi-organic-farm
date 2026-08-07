@@ -1,0 +1,223 @@
+.head {
+  padding: 56px 0 8px;
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(30px, 4vw, 44px);
+  margin-top: 8px;
+}
+
+.sub {
+  margin: 14px auto 0;
+  max-width: 540px;
+  font-size: 15.5px;
+}
+
+.checkerSection {
+  padding: 36px 0 60px;
+}
+
+.checkerCard {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--forest);
+  border-radius: 24px;
+  padding: 36px;
+  text-align: center;
+}
+
+.checkerCard h3 {
+  color: #fff;
+  font-size: 19px;
+}
+
+.checkerSub {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.checkerForm {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.checkerForm input {
+  flex: 1;
+  min-width: 200px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: none;
+  outline: none;
+  font-family: var(--font-body);
+  font-size: 14px;
+  background: #fff;
+}
+
+.result {
+  margin-top: 20px;
+  border-radius: 14px;
+  padding: 16px 20px;
+  text-align: left;
+}
+
+.yes {
+  background: rgba(111, 163, 126, 0.18);
+  border: 1px solid rgba(111, 163, 126, 0.4);
+}
+
+.soon {
+  background: rgba(232, 182, 92, 0.16);
+  border: 1px solid rgba(232, 182, 92, 0.4);
+}
+
+.no {
+  background: rgba(176, 68, 47, 0.16);
+  border: 1px solid rgba(176, 68, 47, 0.4);
+}
+
+.resultTitle {
+  color: #fff;
+  font-weight: 600;
+  font-size: 14.5px;
+}
+
+.resultDesc {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.tryChips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 18px;
+  align-items: center;
+}
+
+.tryLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.tryChip {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.tryChip:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
+.zonesSection {
+  padding: 20px 0 80px;
+}
+
+.zoneTabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 34px;
+}
+
+.zoneTab {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  color: var(--ink-soft);
+}
+
+.zoneTabActive {
+  background: var(--forest);
+  color: #fff;
+  border-color: var(--forest);
+}
+
+.zoneGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 860px) {
+  .zoneGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .zoneGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.zoneCard {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.zoneTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.zoneName {
+  font-family: var(--font-display);
+  font-size: 16.5px;
+  color: var(--forest);
+  font-weight: 600;
+}
+
+.statusPill {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 9px;
+  border-radius: 999px;
+}
+
+.statusActive {
+  background: rgba(111, 163, 126, 0.2);
+  color: var(--leaf);
+}
+
+.statusSoon {
+  background: rgba(201, 138, 46, 0.18);
+  color: var(--gold);
+}
+
+.pin {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.slot {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+}

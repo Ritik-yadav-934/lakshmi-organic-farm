@@ -1,0 +1,181 @@
+.head {
+  padding: 56px 0 8px;
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(30px, 4vw, 44px);
+}
+
+.sub {
+  margin: 14px auto 0;
+  max-width: 520px;
+  font-size: 15.5px;
+}
+
+.toggleRow {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 8px;
+}
+
+.toggle {
+  display: inline-flex;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px;
+  gap: 4px;
+}
+
+.toggle button {
+  border: none;
+  background: transparent;
+  padding: 9px 20px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--ink-soft);
+}
+
+.toggleActive {
+  background: var(--forest);
+  color: #fff !important;
+}
+
+.saveBadge {
+  font-size: 10px;
+  background: var(--gold);
+  color: var(--forest);
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-left: 6px;
+}
+
+.plansSection {
+  padding: 32px 0 70px;
+}
+
+.planGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .planGrid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
+
+.addonsSection {
+  padding: 0 0 100px;
+}
+
+.addonsHead {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.h2 {
+  margin-top: 8px;
+  font-size: clamp(24px, 3vw, 32px);
+}
+
+.addonGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 760px) {
+  .addonGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.addon {
+  background: #fff;
+  border: 1.5px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.addon:hover {
+  border-color: var(--leaf-light);
+}
+
+.addonActive {
+  border-color: var(--gold);
+  background: var(--beige);
+}
+
+.addonName {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--forest);
+}
+
+.addonPrice {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-soft);
+  margin-top: 3px;
+}
+
+.summaryBar {
+  position: sticky;
+  bottom: 0;
+  z-index: 50;
+  background: var(--forest);
+  color: #fff;
+  padding: 18px 0;
+  box-shadow: 0 -12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.summaryInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.summaryPlan {
+  font-family: var(--font-display);
+  font-size: 16px;
+}
+
+.summaryDetail {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.65);
+  font-family: var(--font-mono);
+}
+
+.summaryRight {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.summaryTotal {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--gold-light);
+}
+
+.summaryTotal span {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}

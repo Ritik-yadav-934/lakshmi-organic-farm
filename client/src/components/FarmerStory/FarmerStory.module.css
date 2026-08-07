@@ -1,0 +1,95 @@
+.switcher {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .switcher {
+    grid-template-columns: 1fr;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.active {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--gold);
+}
+
+.avatar {
+  flex: none;
+}
+
+.name {
+  color: #fff;
+  font-size: 14.5px;
+  font-weight: 600;
+}
+
+.role {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+}
+
+.detail {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+  padding: 34px;
+  display: flex;
+  gap: 26px;
+  align-items: flex-start;
+}
+
+@media (max-width: 640px) {
+  .detail {
+    flex-direction: column;
+  }
+}
+
+.detail h3 {
+  color: #fff;
+  font-size: 22px;
+}
+
+.detailRole {
+  color: var(--gold-light);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.bio {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+  margin-top: 14px;
+  max-width: 440px;
+}
+
+.detailYears {
+  margin-top: 16px;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-mono);
+}

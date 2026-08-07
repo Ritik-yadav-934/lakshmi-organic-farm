@@ -1,0 +1,58 @@
+# =========================
+# Node / React
+# =========================
+client/node_modules/
+client/dist/
+client/.env
+client/.env.local
+
+# =========================
+# Python / FastAPI
+# =========================
+server/venv/
+server/.venv/
+server/__pycache__/
+server/**/*.pyc
+__pycache__/
+*.pyc
+
+# =========================
+# Environment Variables
+# =========================
+.env
+server/.env
+client/.env
+
+# =========================
+# Uploads
+# =========================
+server/uploads/*
+!server/uploads/.gitkeep
+
+# =========================
+# VS Code / IDE
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Operating System Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Python Cache
+# =========================
+.pytest_cache/
+.mypy_cache/
+
+# =========================
+# npm
+# =========================
+npm-debug.log*
