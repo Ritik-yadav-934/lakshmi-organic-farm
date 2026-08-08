@@ -12,3 +12,4 @@ pydantic-settings
 python-dotenv
 cloudinary
 Pillow
+email-validator
