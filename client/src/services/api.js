@@ -1,29 +1,45 @@
-import axios from 'axios';
+import axios from "axios";
+
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL ||
+  "http://localhost:8000";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000',
-  headers: { 'Content-Type': 'application/json' },
+  baseURL: API_BASE_URL,
+  headers: {
+    "Content-Type": "application/json",
+  },
 });
 
-// Attach the admin JWT (if present) to every request automatically.
-api.interceptors.request.use((config) => {
-  const token = localStorage.getItem('lof_admin_token');
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-  return config;
-});
+// Attach JWT token automatically
+api.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem("lof_admin_token");
 
-// Central place to react to auth failures — redirect to admin login on 401.
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
+// Handle expired/invalid tokens
 api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-      localStorage.removeItem('lof_admin_token');
-      if (window.location.pathname.startsWith('/admin') && window.location.pathname !== '/admin/login') {
-        window.location.href = '/admin/login';
+      localStorage.removeItem("lof_admin_token");
+
+      if (
+        window.location.pathname.startsWith("/admin") &&
+        window.location.pathname !== "/admin/login"
+      ) {
+        window.location.href = "/admin/login";
       }
     }
+
     return Promise.reject(error);
   }
 );
