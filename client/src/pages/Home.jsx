@@ -3,6 +3,8 @@ import WhatsAppButton from '../components/WhatsAppButton/WhatsAppButton.jsx';
 import SurveyButton from '../components/SurveyButton/SurveyButton.jsx';
 import Testimonials from '../components/Testimonials/Testimonials.jsx';
 import styles from './Home.module.css';
+import React from "react";
+
 
 export default function Home() {
   return (
@@ -121,6 +123,16 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div className={styles.adminLoginSection}>
+        <Link
+          to="/admin/login"
+          className={styles.adminLoginButton}
+        >
+          Admin Login
+        </Link>
+      </div>
+
+
     </>
   );
 }
